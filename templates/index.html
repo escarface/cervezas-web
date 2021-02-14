@@ -1,46 +1,32 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cervezas Webapp</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-  </head>
-  <section class="hero is-dark is-bold">
-    <div class="hero-body">
-      <p class="title">
-        Cervezas Aleatorias Webapp!
-      </p>
-      <p class="subtitle">
-        ¿Que Cerveza quieres beber hoy?
-      </p>
-    </div>
-  </section>
-  <body>
-  <section class="section">
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="section">
     <div class="container">
-            <div class="content is-large">
+        <div class="content is-large">
             <h1>{{beer.name}}</h1>
             <h4>Puntuación: {{beer.abv}}</h4>
             <p>{{beer.description}}</p>
             <h5>¿Que cenar con esta cerveza?</h5>
             <p>{{beer.foodpair}}</p>
-            </div>
+        </div>
 
     </div>
-</br>
+    </br>
     <div class="container">
         <button class="button is-large" onClick="window.location.reload();"> Otra Cerveza!!</button>
     </div>
-  </section>
-  <footer class="footer">
+</section>
+<footer class="footer">
     <div class="content has-text-centered">
-      <p>
-        <strong>Cerveza Web App</strong> by <a href="https://jgthms.com">Saredigital</a>. The source code is licensed
-        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-      </p>
+        <p>
+            <strong>Cerveza Web App</strong> by <a href="https://jgthms.com">Saredigital</a>. The source code is
+            licensed
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+        </p>
     </div>
-  </footer>
-  </body>
-</html>
+</footer>
+{% endblock %}
+
+
